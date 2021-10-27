@@ -75,23 +75,22 @@ body {
 			white-space: nowrap;
 			letter-spacing: 0.25px;
 			font-family: "Google Sans";
+			border-radius: 0 20px 20px 0;
 			svg:not(svg[width="36"]) {
 				path:not(path[fill="none"]) {
 					fill: #616161;
 				}
 				margin: 0px 20px 0px 0px;
 			}
-			span:not(:last-child) {
+			span:nth-child(2) {
 				flex: 1 1 auto;
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
 		}
-		&._active {
+		.active-route-link {
 			background: #e8f0fe;
-			a {
-				color: #1967d2;
-			}
+			color: #1967d2;
 			svg:not(svg[width="36"]) {
 				path:not(path[fill="none"]) {
 					fill: #1967d2;

@@ -1,16 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useRouteMatch } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
-const CustomLink = ({ children, to, activeClass }) => {
-	let match = useRouteMatch({
-		path: to,
-		exact: activeClass
-	});
+const CustomLink = ({children, to, divClassName, linkActiveClassName}) => {
 	return (
-		<div className={match ? "_router-link _active" : "_router-link"}>
-			{match && ""}
-			<Link to={to}>{children}</Link>
+		<div className={divClassName}>
+			<NavLink activeClassName={linkActiveClassName} to={to}>
+				{children}
+			</NavLink>
 		</div>
 	)
 }
