@@ -1,0 +1,209 @@
+.header {
+	& *:hover {
+		transition: all 0.3s ease 0s;
+	}
+	&__wrapper {
+	}
+	&__container {
+		padding: 8px;
+		display: flex;
+		align-items: center;
+	}
+	&__title {
+		display: flex;
+		min-width: 268px;
+		padding: 0 30px 0 0;
+		align-items: center;
+	}
+	&__search {
+	}
+	&__actions {
+	}
+}
+.title-header {
+	&__menu {
+	}
+	&__img {
+		padding: 0 4px 0 0;
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__text {
+		font-family: "Product Sans", "Arial";
+		font-size: 22px;
+		line-height: 24px;
+		padding: 0 0 0 4px;
+		color: #5f6368;
+	}
+}
+.menu {
+	&_burger {
+		width: 48px;
+		height: 48px;
+		margin: 0 4px;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		svg {
+			width: 24px;
+			height: 24px;
+			path {
+				fill: #5f6368;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #3c404314;
+			}
+		}
+	}
+}
+.search-header {
+	height: 48px;
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	&__container {
+		flex: 1 1 auto;
+		padding: 0 30px 0 10px;
+		box-sizing: content-box;
+	}
+	&__form {
+		flex: 1 1 auto;
+		display: flex;
+		max-width: 722px;
+		border-radius: 8px;
+		align-items: center;
+		background: #f1f3f4;
+		transition: background 100ms ease-in, width 100ms ease-out;
+		&._focus {
+			background-color: #fff;
+			border-radius: 8px 8px 0 0;
+			box-shadow: 0 1px 1px 0 rgba(65, 69, 73, 0.3), 0 1px 3px 1px rgba(65, 69, 73, 0.15);
+		}
+	}
+	&__search-button {
+		width: 46px;
+		height: 46px;
+		margin: 0 5px;
+		border-radius: 50%;
+		background-color: transparent;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #3c404314;
+			}
+		}
+	}
+	&__input {
+		font-family: "Google Sans";
+		height: 48px;
+		color: #000;
+		flex: 1 1 auto;
+		font-size: 16px;
+		line-height: 46;
+		font-weight: 400;
+		letter-spacing: 0.2px;
+		background-color: transparent;
+		&::placeholder {
+			color: #777879;
+		}
+	}
+	&__delete-button {
+		width: 46px;
+		height: 46px;
+		margin: 0 5px 0 0;
+		border-radius: 50%;
+		background-color: transparent;
+		&._active {
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #3c404314;
+				}
+			}
+		}
+	}
+	&__settings {
+		height: 48px;
+		flex: 0 0 98px;
+		display: flex;
+		align-items: center;
+	}
+	&__ques {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #3c404314;
+			}
+		}
+	}
+	&__set {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #3c404314;
+			}
+		}
+	}
+}
+.search-actions {
+}
+.actions-header {
+	&__account {
+	}
+}
+.account-actions {
+	width: 90px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 30px;
+	&__otherapps {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		margin: 4px 2px 4px 0;
+		justify-content: center;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #3c404314;
+			}
+		}
+	}
+	&__acc {
+		width: 40px;
+		height: 40px;
+		padding: 4px 0 4px 6px;
+		div {
+			span {
+				width: 32px;
+				height: 32px;
+				color: #fff;
+				display: flex;
+				font-size: 17px;
+				font-weight: 500;
+				overflow: hidden;
+				border-radius: 50%;
+				position: relative;
+				align-items: center;
+				justify-content: center;
+				background-color: #0288d1;
+			}
+		}
+	}
+}

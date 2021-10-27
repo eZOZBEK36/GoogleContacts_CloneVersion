@@ -1,0 +1,361 @@
+@import "null.scss";
+@import "fonts.scss";
+@import "header.scss";
+
+body {
+	font-family: "Roboto";
+	font-weight: 400;
+}
+.boxshadov {
+	width: 1000px;
+	height: 600px;
+	position: relative;
+}
+.boxshadovblock {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.main__contact {
+	display: flex;
+	position: relative;
+	align-items: flex-start;
+	.sidebar {
+		flex: 0 0 276px;
+		position: relative;
+		left: -276px;
+		transition: all 0.3s ease 0s;
+	}
+	.components {
+		flex: 0 0 100vw;
+		position: relative;
+		left: -276px;
+		padding: 0 16px;
+		transition: all 0.3s ease 0s;
+	}
+	&._open {
+		.sidebar,
+		.components {
+			left: 0;
+		}
+		.components {
+			flex: 0 0 calc(100vw - 276px);
+		}
+	}
+}
+/*SIDEBAR*/
+.sidebar {
+	._router-link {
+		width: 260px;
+		height: 40px;
+		display: flex;
+		font-size: 14px;
+		background: #fff;
+		align-items: center;
+		border-radius: 0 20px 20px 0;
+		transition: all 100ms ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #f1f3f4;
+			}
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			padding: 0 26px;
+			font-size: 14px;
+			color: #202124;
+			font-weight: 500;
+			line-height: 20px;
+			align-items: center;
+			white-space: nowrap;
+			letter-spacing: 0.25px;
+			font-family: "Google Sans";
+			svg:not(svg[width="36"]) {
+				path:not(path[fill="none"]) {
+					fill: #616161;
+				}
+				margin: 0px 20px 0px 0px;
+			}
+			span:not(:last-child) {
+				flex: 1 1 auto;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		&._active {
+			background: #e8f0fe;
+			a {
+				color: #1967d2;
+			}
+			svg:not(svg[width="36"]) {
+				path:not(path[fill="none"]) {
+					fill: #1967d2;
+				}
+			}
+		}
+	}
+	&__wrapper {
+	}
+	&__container {
+	}
+	&__addcontact {
+	}
+	&__list {
+	}
+	&__contactslist {
+		padding: 6.5px 0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	&__groups {
+		padding: 6.5px 0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	&__btn,
+	&__actions {
+		button {
+			width: 260px;
+			height: 40px;
+			display: flex;
+			padding: 0 26px;
+			background: #fff;
+			align-items: center;
+			white-space: nowrap;
+			letter-spacing: 0.25px;
+			border-radius: 0 20px 20px 0;
+			transition: all 100ms ease 0s;
+			span {
+				font-size: 14px;
+				font-weight: 500;
+				color: #202124;
+				line-height: 20px;
+				overflow: hidden;
+				white-space: nowrap;
+				letter-spacing: 0.25px;
+				text-overflow: ellipsis;
+				font-family: "Google Sans";
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #f1f3f4;
+				}
+			}
+			svg {
+				path:not(path[fill="none"]) {
+					fill: #616161;
+				}
+				margin: 0px 20px 0px 0px;
+			}
+			span:not(:last-child) {
+				flex: 1 1 auto;
+			}
+		}
+	}
+	&__actions {
+		padding: 6.5px 0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	&__importbtn {
+	}
+	&__exportbtn {
+	}
+	&__printbtn {
+	}
+	&__other {
+		padding: 6.5px 0;
+	}
+}
+.addcontact {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	height: 82px;
+	width: 260px;
+	display: flex;
+	padding: 0 0 0 6px;
+	align-items: center;
+	background: #fff;
+	&__item {
+		width: 187px;
+		height: 50px;
+		display: flex;
+		padding: 0 18px;
+		color: #3c4043;
+		border-radius: 25px;
+		align-items: center;
+		background-color: #fff;
+		box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+		transition: background 120ms (0, 0, 0.2, 1) 0s, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+			opacity 15ms linear 30ms, transform 270ms 0ms cubic-bezier(0, 0, 0.2, 1);
+		@media (any-hover: hover) {
+			&:hover {
+				a {
+					transition: all 0.3s ease 0s;
+					color: rgb(23, 78, 166);
+				}
+				background-color: #f6f9fe;
+				box-shadow: 0 2px 3px 0 rgba(60, 64, 67, 0.3), 0 6px 10px 4px rgba(60, 64, 67, 0.15);
+			}
+		}
+		._router-link {
+			background-color: transparent;
+			a {
+				padding: 0 !important;
+			}
+			&._active {
+				a {
+					color: #3c4043;
+				}
+				background-color: transparent;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			font-size: 14px;
+			color: #3c4043;
+			align-items: center;
+			justify-content: center;
+			font: 500 14px "Google Sans";
+			svg {
+				margin-right: 12px;
+			}
+		}
+	}
+}
+.contactslist {
+	&__item {
+	}
+}
+/*SIDEBAR*/
+/*CONTACT*/
+.contacts {
+	._list-item {
+		display: grid;
+		align-items: center;
+		grid-auto-flow: column;
+		// color: rgb(68, 68, 68);
+		grid-template-columns: 30% repeat(3, 20%) 10%;
+	}
+	&__wrapper {
+	}
+	&__container {
+	}
+	&__header {
+	}
+	&__favourites {
+	}
+	&__list {
+	}
+}
+.header-contacts {
+	height: 50px;
+	display: grid;
+	align-items: center;
+	grid-auto-flow: column;
+	margin: 0px 0px 8px 0px;
+	padding: 0px 4px 0px 10px;
+	border-bottom: 1px solid #e0e0e0;
+	grid-template-columns: 30% repeat(3, 20%) 10%;
+	&__item {
+		height: 40px;
+		display: flex;
+		font-size: 14px;
+		font-weight: 500;
+		color: #5f6368;
+		overflow: hidden;
+		line-height: 20px;
+		white-space: nowrap;
+		align-items: center;
+		font-family: "Roboto";
+		letter-spacing: 0.25px;
+		text-overflow: ellipsis;
+		&:last-child {
+			justify-self: flex-end;
+		}
+	}
+}
+.list-contacts {
+	&__title {
+		display: flex;
+		font-size: 11px;
+		color: #5f6368;
+		max-height: 20px;
+		font-weight: 500;
+		line-height: 145%;
+		letter-spacing: 0.8px;
+		font-family: "Roboto";
+		box-sizing: content-box;
+		padding: 10px 0 10px 10px;
+		text-transform: uppercase;
+	}
+	&__items {
+	}
+	&__item {
+	}
+}
+.list-item {
+	&__drag {
+	}
+	&__name {
+		display: flex;
+		align-items: center;
+	}
+	&__mail {
+	}
+	&__phoneNumber {
+	}
+	&__company {
+	}
+	&__actions {
+	}
+}
+/*CONTACT*/
+/*NEWCONTACT*/
+.newcontact {
+	&__wrapper {
+	}
+	&__container {
+	}
+	&__header {
+	}
+	&__form {
+	}
+}
+.header-newcontact {
+	&__profileimage {
+	}
+	&__selectimage {
+	}
+	&__groupset {
+	}
+	&__send {
+	}
+}
+.form-newcontact {
+	&__names {
+	}
+	&__firstname {
+	}
+	&__lastname {
+	}
+	&__position {
+	}
+	&__company {
+	}
+	&__mail {
+	}
+	&__phoneNumber {
+	}
+}
+/*NEWCONTACT*/
