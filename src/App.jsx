@@ -73,7 +73,7 @@ const App = (props) => {
 						<div className="components">
 							<Switch>
 								<Route exact path={'/new'} render={() => <NewContact contact={contacts} setContact={setContacts} />} />
-								<Route exact path={'/contacts'} render={() => <Contacts contact={contacts} setContact={setContacts} />} />
+								<Route exact path={'/'} render={() => <Contacts contact={contacts} setContact={setContacts} />} />
 								<Route exact path={'/frequent'} render={() => <Frequent />} />
 								<Route exact path={'/suggestions'} render={() => <Suggestions />} />
 								<Route exact path={'/other'} render={() => <Other />} />
