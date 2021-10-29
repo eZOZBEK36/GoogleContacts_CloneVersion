@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CustomLink from '../Route/CustomLink';
+import GoBack from '../UI/GoBack/GoBack';
 
 const NewContact = ({ contact, setContact }) => {
 	const [firstName, setFirstName] = useState('');
@@ -33,11 +34,11 @@ const NewContact = ({ contact, setContact }) => {
 	}
 	return (
 		<div className="newcontact">
-			<CustomLink to="/contacts">
+			<GoBack>
 				<svg width="24" height="24" viewBox="0 0 24 24">
 					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
 				</svg>
-			</CustomLink>
+			</GoBack>
 			<div className="newcontact__wrapper">
 				<div className="newcontact__container">
 					<div className="newcontact__header header-newcontact">

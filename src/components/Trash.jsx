@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Trash = (props) => {
-   return (
-      <div>
-         This is a Trash component
-      </div>
-   )
+	return (
+		<div>
+
+		</div>
+	)
 }
 
 export default Trash;
